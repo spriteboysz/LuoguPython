@@ -4,7 +4,7 @@
 Author: Deean
 Date: 2024-08-04 09:20
 FileName: 入门与面试
-Description:P2090.py 
+Description:B2090 年龄与疾病.py
 """
 
 
