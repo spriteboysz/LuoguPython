@@ -13,12 +13,9 @@ from string import hexdigits
 def func():
     x, m = map(int, input().strip().split())
     ss = []
-    while True:
-        div, mod = divmod(x, m)
+    while x > 0:
+        x, mod = divmod(x, m)
         ss.append(mod)
-        if div == 0:
-            break
-        x = div
     print(''.join([hexdigits[i].upper() for i in ss[::-1]]))
 
 
