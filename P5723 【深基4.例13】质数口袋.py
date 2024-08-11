@@ -18,13 +18,16 @@ def func():
         return True
 
     n = int(input().strip())
-    nums, total = [], 0
+    total, cnt = 0, 0
     for i in range(2, n + 1):
-        if check(i) and total < n:
-            nums.append(i)
-            total += i
-    print('\n'.join(map(str, nums)))
-    print(len(nums))
+        if check(i):
+            if total + i <= n:
+                total += i
+                print(i)
+                cnt += 1
+            else:
+                break
+    print(cnt)
 
 
 if __name__ == '__main__':

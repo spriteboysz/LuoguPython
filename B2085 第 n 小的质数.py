@@ -11,7 +11,7 @@ Description:B2085 第 n 小的质数.py
 def func():
     def check(x):
         if x < 2:
-            return False;
+            return False
         for i in range(2, int(x ** 0.5) + 1):
             if x % i == 0:
                 return False
