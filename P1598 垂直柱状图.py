@@ -13,9 +13,8 @@ from itertools import zip_longest
 def func():
     s = ''.join([input().strip() for _ in range(4)])
     alphabet = [0] * 26
-    for ch in s:
-        if 'A' <= ch <= 'Z':
-            alphabet[ord(ch) - ord('A')] += 1
+    for ch in filter(lambda ch: 'A' <= ch <= 'Z', s):
+        alphabet[ord(ch) - ord('A')] += 1
 
     grid = []
     for i in range(26):
@@ -23,8 +22,8 @@ def func():
 
     grid = list(map(lambda row: list(row), zip_longest(*grid)))
     for i, row in enumerate(grid):
-        for j, num in enumerate(row):
-            if not num:
+        for j, v in enumerate(row):
+            if not v:
                 grid[i][j] = ' '
     for row in grid[::-1]:
         print(' '.join(row).rstrip())
