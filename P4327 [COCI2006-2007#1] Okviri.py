@@ -32,7 +32,7 @@ def func():
         grid[1][i + 2] = '*'
         grid[-2][i] = '*'
         grid[-2][i + 2] = '*'
-    for i in range(8, m-1, 12):
+    for i in range(8, m - 1, 12):
         grid[2][i] = '*'
         grid[2][i + 4] = '*'
 
