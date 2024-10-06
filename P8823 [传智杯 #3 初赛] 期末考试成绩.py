@@ -9,18 +9,18 @@ Description:P8823 [传智杯 #3 初赛] 期末考试成绩.py
 
 
 def func():
-    s = int(input().strip())
-    if s >= 90:
-        gpa = 4
-    elif s >= 60:
-        gpa = 4.0 - (90 - s) * 0.1
+    x = int(input().strip())
+    if x >= 90:
+        g = 4
+    elif x >= 60:
+        g = 4.0 - (90 - x) * 0.1
     else:
-        gpa = (s ** 0.5) * 10 // 1
-        if gpa >= 60:
-            gpa = 4.0 - (90 - gpa) * 0.1
+        g = (x ** 0.5) * 10 // 1
+        if g >= 60:
+            g = 4.0 - (90 - g) * 0.1
         else:
-            gpa = 0
-    print(f'{gpa:.1f}')
+            g = 0
+    print(f'{g:.1f}')
 
 
 if __name__ == '__main__':
