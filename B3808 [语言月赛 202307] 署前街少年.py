@@ -16,7 +16,7 @@ def func():
         quadrant[i % k] += num
 
     for i in range(0, n * 2, 2):
-        nums[i] = quadrant[i % k] % (i+1)
+        nums[i] = quadrant[i % k] % (i + 1)
     print(' '.join(map(str, nums)))
 
 
